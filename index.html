@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Javascript file security</title>
+
+    <meta name="Description" content="Optical Character Recognition demo in JavaScript"/>
+    <meta property="og:image" content="http://kdzwinel.github.io/JS-OCR-demo/img/process.png"/>
+    <link rel="image_src" href="http://kdzwinel.github.io/JS-OCR-demo/img/process.png"/>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/jquery.Jcrop.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+</head>
+<body class="step1">
+
+<div class="container">
+    <div class="alert alert-danger"><strong>Oops!</strong> <span></span></div>
+    <div class="jumbotron">
+        <div id="step1">
+
+            <figure class="not-ready">
+                <video autoplay></video>
+            </figure>
+
+        </div>
+        <div id="step2">
+            <figure>
+                <canvas style="display:none"></canvas>
+                <img src=""/>
+            </figure>
+
+
+        </div>
+        <div id="step3">
+            <figure>
+                <canvas></canvas>
+            </figure>
+
+            <blockquote>
+                <p id="result"></p>
+                <footer></footer>
+            </blockquote>
+
+        </div>
+    </div>
+	<div style="margin-bottom:10%;"><h2>COUNT</h2><input type="text" id="count" onChange="javascript:setChange();"><a href="http://www.naver.com">네이버</a><input type="hidden" id="countStay" value=""></div>
+	<div id="testimg"></div>
+
+
+</div>
+<!-- /container -->
+
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="js/vendor/modernizr.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/vendor/ocrad.min.js"></script>
+<script src="js/vendor/glfx.min.js"></script>
+<script src="js/main.js"></script>
+
+
+<!-- Social -->
+<script>!function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+    if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+    }
+}(document, 'script', 'twitter-wjs');</script>
+<script type="text/javascript">
+    (function () {
+        var po = document.createElement('script');
+        po.type = 'text/javascript';
+        po.async = true;
+        po.src = 'https://apis.google.com/js/platform.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(po, s);
+    })();
+</script>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script>
+function setChange(){
+	$("#countStay").val($("#count").val());
+	console.log($("#countStay").val());
+}
+
+</script>
+</body>
+</html>
